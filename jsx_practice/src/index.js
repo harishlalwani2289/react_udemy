@@ -7,7 +7,7 @@ function getTime() {
 
 const App = function () {
   const buttonText = {
-    text: "Click Me Please!!",
+    text: "Click Me!!",
   };
   return (
     <div>
