@@ -1,26 +1,42 @@
+import faker from "faker";
 import React from "react";
 import ReactDOM from "react-dom";
-import faker from "faker";
+import CommentDetail from "./CommentDetail";
+import ApprovalCard from "./ApprovalCard";
 
 const App = () => {
   return (
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()}></img>
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6pm</span>
-          </div>
-          <div className="text">
-            My first comment and it is a nice blog post
-          </div>
+      <ApprovalCard>
+        <div>
+          <h4>Warning!</h4>
+          Are you sure you want to do this?
         </div>
-      </div>
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Sam"
+          timeAgo="Today at 4:45 PM"
+          content="Bravo!!"
+          image={faker.image.avatar()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Alex"
+          timeAgo="Today at 2:00 AM"
+          content="Good Job!!"
+          image={faker.image.avatar()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="John"
+          timeAgo="Yesterday at 5:00 PM"
+          content="Awesome man!!"
+          image={faker.image.avatar()}
+        />
+      </ApprovalCard>
     </div>
   );
 };
