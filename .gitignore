@@ -1,1 +1,9 @@
 node_modules
+.DS_Store
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations.xml
+.idea/udemy_react.iml
+.idea/vcs.xml
+jsx_practice/.DS_Store
+jsx_practice/.DS_Store
