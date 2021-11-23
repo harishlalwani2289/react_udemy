@@ -13,15 +13,19 @@ class App extends React.Component {
 
   state = { lat: null, err: "" };
 
-  // React says we have to define render
-  render() {
+  renderContent() {
     if (this.state.lat && !this.state.err) {
       return <SeasonDisplay lat={this.state.lat} />;
     } else if (!this.state.lat && this.state.err) {
       return <div>Error: {this.state.err}</div>;
     } else {
-      return <Spinner />;
+      return <Spinner></Spinner>;
     }
+  }
+
+  // React says we have to define render
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 
   // Lifecycle method.
