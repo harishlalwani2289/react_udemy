@@ -6,3 +6,4 @@ node_modules
 .idea/udemy_react.iml
 .idea/vcs.xml
 jsx_practice/.DS_Store
+/resources/
